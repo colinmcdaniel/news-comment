@@ -45,7 +45,8 @@ $(document).on('click', 'p', function(){
 
 // when you click the savenote button
 $(document).on('click', '#savenote', function(){
-  // grab the id associated with the article from the submit button
+
+  // Grab the id associated with the article from the submit button
   var thisId = $(this).attr('data-id');
 
   // run a POST request to change the note, using what's entered in the inputs
@@ -71,17 +72,21 @@ $(document).on('click', '#savenote', function(){
 
 // When you click the deletenote button
 $(document).on('click', '#deletenote', function(){
-  // grab the id associated with the article from the submit button
+
+  // Grab the id associated with the article from the submit button
   var thisId = $(this).attr('data-id');
 
   // run a POST request to change the note, using what's entered in the inputs
   $.ajax({
-    method: "DELETE",
+    method: "POST",
     url: "/articles/" + thisId,
+    data: {
+      title: "", // value taken from title input
+      body: "" // value taken from note textarea
+    }
   }).done(function( data ) {
 
       // Log the response
-      console.log("Deleted:");
       console.log(data);
       // empty the notes section
       $('#notes').empty();
