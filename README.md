@@ -14,4 +14,4 @@ This web application scrapes information from Reddit's news page and allows user
 * Mongoose ORM
 * Cheerio
 
-![news-scraper](https://cloud.githubusercontent.com/assets/18273101/22093861/014961b6-ddbe-11e6-991e-6c40e0baaa4c.gif)
+![news-scraper](https://cloud.githubusercontent.com/assets/18273101/22094076/7b75aa66-ddbf-11e6-80ee-59854c5daa84.gif)
